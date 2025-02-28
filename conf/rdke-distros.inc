@@ -49,7 +49,7 @@ DISTRO_FEATURES:append = ' enable_rialto'
 DISTRO_FEATURES:append = ' thunder_startup_services'
 DISTRO_FEATURES:append = ' wpeframework_systemd_notify'
 
-# DISTRO_FEATURES:append = ' gamepad-using-libmanette'
+DISTRO_FEATURES:append = ' gamepad-using-libmanette'
 
 # RDK-E Topic simplification RDK-43306 remove gperftools
 DISTRO_FEATURES:append = ' debugtools_disable_gpertools'
