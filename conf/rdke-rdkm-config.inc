@@ -16,3 +16,9 @@ PREFERRED_PROVIDER_virtual/default-font ?= "liberation-fonts"
 DISTRO_FEATURES:append = " DAC_SUPPORT"
 DISTRO_FEATURES:append = " rdkshell"
 DISTRO_FEATURES:append = " enable-dab"
+
+# GDB has incompatible gplv3 license
+DISTRO_FEATURES:remove = "enable_gdb_support"
+
+# Todo: Remove when REFPLTV-2709 is fixed and released in MW
+BUILD_FACTORY_TEST = "false"
