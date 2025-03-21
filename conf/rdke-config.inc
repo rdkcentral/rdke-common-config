@@ -31,5 +31,5 @@ OPTIMIZE_DEFAULT = "-Os"
 FULL_OPTIMIZATION = "${OPTIMIZE_DEFAULT} -pipe ${DEBUG_FLAGS}"
 
 #Removing fstackprotector and fortify source
-SECURITY_CFLAGS_remove = " -fstack-protector -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Wno-error=format-security -Wno-error=unused-result"
-SECURITY_LDFLAGS_remove = " -fstack-protector"
+SECURITY_CFLAGS:remove = " -fstack-protector -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Wno-error=format-security -Wno-error=unused-result"
+SECURITY_LDFLAGS:remove = " -fstack-protector"
