@@ -16,3 +16,5 @@ PREFERRED_PROVIDER_virtual/default-font ?= "liberation-fonts"
 DISTRO_FEATURES:append = " DAC_SUPPORT"
 DISTRO_FEATURES:append = " rdkshell"
 DISTRO_FEATURES:append = " enable-dab"
+
+RDK_ARTIFACTS_BASE_URL = "${RDKM_ARTIFACTS_BASE_URL}/rdkm"
