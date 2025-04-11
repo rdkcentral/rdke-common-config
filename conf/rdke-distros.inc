@@ -1,5 +1,6 @@
 DISTRO_FEATURES:append = ' alsa'
 DISTRO_FEATURES:append = ' apparmor'
+DISTRO_FEATURES:append = ' apparmor_segmented_global'
 DISTRO_FEATURES:append = ' argp'
 DISTRO_FEATURES:append = ' aslr'
 DISTRO_FEATURES:append = ' bind'
