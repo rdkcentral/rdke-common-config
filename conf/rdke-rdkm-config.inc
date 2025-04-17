@@ -24,3 +24,6 @@ DISTRO_FEATURES:remove = "enable_gdb_support"
 
 # Todo: Remove when REFPLTV-2709 is fixed and released in MW
 BUILD_FACTORY_TEST = "false"
+
+# Enable Distro to remove provisioning precondition check while activate OCDM plugin
+DISTRO_FEATURES:append = " disable_provision_precondition_rdkm"
