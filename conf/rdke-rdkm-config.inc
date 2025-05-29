@@ -13,6 +13,9 @@ VOICE_NEXTGEN_MAC = "false"
 #TODO. Need to remove once rdkfonts is  ready for opensourcing
 PREFERRED_PROVIDER_virtual/default-font ?= "liberation-fonts"
 
+#libpackage support for DAC applications
+PREFERRED_PROVIDER_virtual/libpackage = "packager-lisa"
+
 DISTRO_FEATURES:append = " DAC_SUPPORT"
 DISTRO_FEATURES:append = " rdkshell"
 DISTRO_FEATURES:append = " enable-dab"
