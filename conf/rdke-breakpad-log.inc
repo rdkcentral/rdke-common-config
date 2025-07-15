@@ -39,7 +39,7 @@ BACKTRACE_DEPENDS:pn-wpe-webkit = " breakpad-wrapper"
 BACKTRACE_DEPENDS:pn-dcmd = " breakpad-wrapper"
 BACKTRACE_DEPENDS:pn-rfc = " breakpad-wrapper"
 BACKTRACE_DEPENDS:pn-AmazonPrimeVideoApp = " breakpad-wrapper"
-BACKTRACE_DEPENDS:pn-amazonPrimeVideo = " breakpad-wrapper
+BACKTRACE_DEPENDS:pn-amazonPrimeVideo = " breakpad-wrapper"
 
 BACKTRACE_LDFLAGS:pn-iarmbus = " -Wl,--no-as-needed -lbreakpadwrapper -Wl,--as-needed "
 BACKTRACE_LDFLAGS:pn-iarmmgrs = " -lbreakpadwrapper "
