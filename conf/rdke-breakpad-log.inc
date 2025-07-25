@@ -79,4 +79,3 @@ BACKTRACE_LDFLAGS:pn-wpeframework = " -Wl,--no-as-needed -lbreakpadwrapper -Wl,-
 
 DEPENDS:append = " ${@LOG_BACKTRACE == "y" and BACKTRACE_DEPENDS or ""}"
 LDFLAGS:append = " ${@LOG_BACKTRACE == "y" and BACKTRACE_LDFLAGS or ""}"
-LDFLAGS:remove:pn-wpeframework = "${@LOG_BACKTRACE == 'y' and BACKTRACE_LDFLAGS or ''}"
