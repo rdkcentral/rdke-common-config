@@ -38,6 +38,7 @@ BACKTRACE_DEPENDS:pn-libloader-app = " breakpad-wrapper"
 BACKTRACE_DEPENDS:pn-wpe-webkit = " breakpad-wrapper"
 BACKTRACE_DEPENDS:pn-dcmd = " breakpad-wrapper"
 BACKTRACE_DEPENDS:pn-rfc = " breakpad-wrapper"
+BACKTRACE_DEPENDS:pn-nfrtool = " breakpad-wrapper"
 BACKTRACE_DEPENDS:pn-AmazonPrimeVideoApp = " breakpad-wrapper"
 BACKTRACE_DEPENDS:pn-amazonPrimeVideo = " breakpad-wrapper"
 
@@ -77,6 +78,7 @@ BACKTRACE_LDFLAGS:pn-wpe-webkit = " -Wl,--no-as-needed -lbreakpadwrapper -Wl,--a
 BACKTRACE_LDFLAGS:pn-cobaltlauncher = " -Wl,--no-as-needed -lbreakpadwrapper -Wl,--as-needed "
 BACKTRACE_LDFLAGS:pn-dcmd = " -lbreakpadwrapper "
 BACKTRACE_LDFLAGS:pn-rfc = " -Wl,--no-as-needed -lbreakpadwrapper -Wl,--as-needed "
+BACKTRACE_LDFLAGS:pn-nfrtool = " -Wl,--no-as-needed -lbreakpadwrapper -Wl,--as-needed "
 BACKTRACE_LDFLAGS:pn-AmazonPrimeVideoApp = " -Wl,--no-as-needed -lbreakpadwrapper -Wl,--as-needed "
 BACKTRACE_LDFLAGS:pn-amazonPrimeVideo = " -Wl,--no-as-needed -lbreakpadwrapper -Wl,--as-needed "
 
