@@ -39,6 +39,8 @@ BACKTRACE_DEPENDS:pn-wpe-webkit = " breakpad-wrapper"
 BACKTRACE_DEPENDS:pn-dcmd = " breakpad-wrapper"
 BACKTRACE_DEPENDS:pn-rfc = " breakpad-wrapper"
 BACKTRACE_DEPENDS:pn-nfrtool = " breakpad-wrapper"
+BACKTRACE_DEPENDS:pn-AmazonPrimeVideoApp = " breakpad-wrapper"
+BACKTRACE_DEPENDS:pn-amazonPrimeVideo = " breakpad-wrapper"
 
 BACKTRACE_LDFLAGS:pn-iarmbus = " -Wl,--no-as-needed -lbreakpadwrapper -Wl,--as-needed "
 BACKTRACE_LDFLAGS:pn-iarmmgrs = " -lbreakpadwrapper "
@@ -77,6 +79,8 @@ BACKTRACE_LDFLAGS:pn-cobaltlauncher = " -Wl,--no-as-needed -lbreakpadwrapper -Wl
 BACKTRACE_LDFLAGS:pn-dcmd = " -lbreakpadwrapper "
 BACKTRACE_LDFLAGS:pn-rfc = " -Wl,--no-as-needed -lbreakpadwrapper -Wl,--as-needed "
 BACKTRACE_LDFLAGS:pn-nfrtool = " -Wl,--no-as-needed -lbreakpadwrapper -Wl,--as-needed "
+BACKTRACE_LDFLAGS:pn-AmazonPrimeVideoApp = " -Wl,--no-as-needed -lbreakpadwrapper -Wl,--as-needed "
+BACKTRACE_LDFLAGS:pn-amazonPrimeVideo = " -Wl,--no-as-needed -lbreakpadwrapper -Wl,--as-needed "
 
 DEPENDS:append = " ${@LOG_BACKTRACE == "y" and BACKTRACE_DEPENDS or ""}"
 LDFLAGS:append = " ${@LOG_BACKTRACE == "y" and BACKTRACE_LDFLAGS or ""}"
