@@ -81,6 +81,9 @@ BACKTRACE_LDFLAGS:pn-rfc = " -Wl,--no-as-needed -lbreakpadwrapper -Wl,--as-neede
 BACKTRACE_LDFLAGS:pn-nfrtool = " -Wl,--no-as-needed -lbreakpadwrapper -Wl,--as-needed "
 BACKTRACE_LDFLAGS:pn-AmazonPrimeVideoApp = " -Wl,--no-as-needed -lbreakpadwrapper -Wl,--as-needed "
 BACKTRACE_LDFLAGS:pn-amazonPrimeVideo = " -Wl,--no-as-needed -lbreakpadwrapper -Wl,--as-needed "
+BACKTRACE_LDFLAGS:pn-networkmanager-plugin = " -Wl,--no-as-needed -lbreakpadwrapper -Wl,--as-needed "
+BACKTRACE_LDFLAGS:pn-texttrack = " -Wl,--no-as-needed -lbreakpadwrapper -Wl,--as-needed "
+BACKTRACE_LDFLAGS:pn-entservices-mediaanddrm = " -Wl,--no-as-needed -lbreakpadwrapper -Wl,--as-needed "
 
 DEPENDS:append = " ${@LOG_BACKTRACE == "y" and BACKTRACE_DEPENDS or ""}"
 LDFLAGS:append = " ${@LOG_BACKTRACE == "y" and BACKTRACE_LDFLAGS or ""}"
