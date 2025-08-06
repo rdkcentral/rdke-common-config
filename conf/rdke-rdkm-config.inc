@@ -30,3 +30,7 @@ BUILD_FACTORY_TEST = "false"
 
 # Enable Distro to remove provisioning precondition check while activate OCDM plugin
 DISTRO_FEATURES:append = " disable_provision_precondition_rdkm"
+
+#To support multiplatform builds and share mw/app ipk's across chipsets:
+MIDDLEWARE_ARCH = "ipstb-middleware"
+APP_LAYER_ARCH = "ipstb-application"
