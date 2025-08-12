@@ -1,6 +1,6 @@
 # backtrace logging is enabled
 # we set this to "y" or "n" and use it as a conditional later
-
+#test comment dont merge
 LOG_BACKTRACE = "${@bb.utils.contains('DISTRO_FEATURES', 'logbacktrace', 'y', 'n', d)}"
 
 BACKTRACE_LDFLAGS ?= ""
