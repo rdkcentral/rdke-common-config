@@ -79,7 +79,7 @@ BACKTRACE_LDFLAGS:pn-dcmd = " -lbreakpadwrapper "
 BACKTRACE_LDFLAGS:pn-rfc = " -Wl,--no-as-needed -lbreakpadwrapper -Wl,--as-needed "
 BACKTRACE_LDFLAGS:pn-nfrtool = " -Wl,--no-as-needed -lbreakpadwrapper -Wl,--as-needed "
 BACKTRACE_LDFLAGS:pn-amazon-prime-library = " -Wl,--no-as-needed -lbreakpadwrapper -Wl,--as-needed "
-BACKTRACE_LDFLAGS:pn-wpeframework = "-Wl,--no-as-needed -lbreakpadwrapper -Wl,--as-needed"
+BACKTRACE_LDFLAGS:pn-wpeframework = " -Wl,--no-as-needed -lbreakpadwrapper -Wl,--as-needed "
 
 DEPENDS:append = " ${@LOG_BACKTRACE == "y" and BACKTRACE_DEPENDS or ""}"
 LDFLAGS:append = " ${@LOG_BACKTRACE == "y" and BACKTRACE_LDFLAGS or ""}"
