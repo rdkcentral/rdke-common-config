@@ -21,6 +21,7 @@ DISTRO_FEATURES:append = " rdkshell"
 DISTRO_FEATURES:append = " enable-dab"
 DISTRO_FEATURES:append = " cobalt-25"
 DISTRO_FEATURES:append = " enable_cobalt_plugin"
+DISTRO_FEATURES:append = " rialto_in_dac"
 
 # GDB has incompatible gplv3 license, disable by default
 DISTRO_FEATURES:remove = "enable_gdb_support"
