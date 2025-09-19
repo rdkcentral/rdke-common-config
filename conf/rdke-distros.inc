@@ -1,5 +1,5 @@
 DISTRO_FEATURES:append = ' alsa'
-DISTRO_FEATURES:append = ' apparmor'
+#Mahesh DISTRO_FEATURES:append = ' apparmor'
 DISTRO_FEATURES:append = ' argp'
 DISTRO_FEATURES:append = ' aslr'
 DISTRO_FEATURES:append = ' bind'
@@ -44,12 +44,12 @@ DISTRO_FEATURES:append = ' wifi'
 DISTRO_FEATURES:append = ' wpeframework'
 DISTRO_FEATURES:append = ' disable_security_agent'
 DISTRO_FEATURES:append = ' xattr'
-DISTRO_FEATURES:append = ' enable_rialto'
+#Mahesh DISTRO_FEATURES:append = ' enable_rialto'
 
 DISTRO_FEATURES:append = ' thunder_startup_services'
 DISTRO_FEATURES:append = ' wpeframework_systemd_notify'
 
-# DISTRO_FEATURES:append = ' gamepad-using-libmanette'
+DISTRO_FEATURES:append = ' gamepad-using-libmanette'
 
 # RDK-E Topic simplification RDK-43306 remove gperftools
 DISTRO_FEATURES:append = ' debugtools_disable_gpertools'
@@ -59,9 +59,9 @@ DISTRO_FEATURES:append = ' enable_ripple'
 
 DISTRO_FEATURES:append = ' ctrlm'
 DISTRO_FEATURES:append = ' enable_maintenance_manager'
-DISTRO_FEATURES:append = ' rdk_svp'
+#Mahesh DISTRO_FEATURES:append = ' rdk_svp'
 DISTRO_FEATURES:append = ' thunder_security_disable'
 DISTRO_FEATURES:append = ' uhd_enabled'
 DISTRO_FEATURES:append = ' jspp'
-DISTRO_FEATURES:append = ' sec_manager'
 DISTRO_FEATURES:append = ' pwrmgr-plugin'
+DISTRO_FEATURES:append = ' enable_libsoup3'
