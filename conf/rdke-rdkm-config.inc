@@ -32,6 +32,9 @@ BUILD_FACTORY_TEST = "false"
 # Enable Distro to remove provisioning precondition check while activate OCDM plugin
 DISTRO_FEATURES:append = " disable_provision_precondition_rdkm"
 
+# Enable Distro to add sceneset 
+DISTRO_FEATURES:append = " sceneset"
+
 # DAC parameter values
 DAC_PARAMS ?= "true"
 DAC_DB_PATH   ?= "/opt/dac_apps/db"
