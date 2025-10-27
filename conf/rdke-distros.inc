@@ -65,3 +65,5 @@ DISTRO_FEATURES:append = ' uhd_enabled'
 DISTRO_FEATURES:append = ' jspp'
 DISTRO_FEATURES:append = ' pwrmgr-plugin'
 DISTRO_FEATURES:append = ' enable_libsoup3'
+DISTRO_FEATURES:append = ' memcapture'
+
