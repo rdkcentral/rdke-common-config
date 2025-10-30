@@ -1,5 +1,6 @@
 DISTRO_FEATURES:append = ' alsa'
 DISTRO_FEATURES:append = ' apparmor'
+DISTO_FEATURES_NATIVE:append = ' apparmor'
 DISTRO_FEATURES:append = ' argp'
 DISTRO_FEATURES:append = ' aslr'
 DISTRO_FEATURES:append = ' bind'
