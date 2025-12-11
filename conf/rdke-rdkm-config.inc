@@ -52,11 +52,11 @@ DAC_CONFIGURL ?= "https://280222515084-rdkm-apps-resources.s3.eu-central-1.amazo
 DAC_DEFAULTS_FILE ?= "${WORKDIR}/dacdefaults.ini"
 
 do_generate_dacdefaults() {
-   cat <<EOF > ${DAC_DEFAULTS_FILE}
-Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.DAC.dacBundlePlatformName = "${DAC_BUN_PLATNAME_OVERRIDE}"
-Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.DAC.dacBundleFirmwareCompatibilityKey = "${DAC_BUN_FIRM_COMP_KEY}"
-Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.DAC.ConfigURL = "${DAC_CONFIGURL}"
-EOF
+	cat <<EOF > ${DAC_DEFAULTS_FILE}
+	Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.DAC.dacBundlePlatformName = "${DAC_BUN_PLATNAME_OVERRIDE}"
+	Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.DAC.dacBundleFirmwareCompatibilityKey = "${DAC_BUN_FIRM_COMP_KEY}"
+	Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.DAC.ConfigURL = "${DAC_CONFIGURL}"
+	EOF
 }
 
 addtask generate_dacdefaults before do_rootfs after do_configure
