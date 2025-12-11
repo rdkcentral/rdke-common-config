@@ -64,6 +64,10 @@ addtask generate_dacdefaults before do_rootfs after do_configure
 ROOTFS_POSTPROCESS_COMMAND += "install_dacdefaults; "
 
 install_dacdefaults() {
+    if [ ! -f "${DAC_DEFAULTS_FILE}" ]; then
+        echo "Error: DAC defaults file '${DAC_DEFAULTS_FILE}' does not exist." >&2
+        exit 1
+    fi
     install -d ${IMAGE_ROOTFS}/etc/rfcdefaults
     install -m 0644 ${DAC_DEFAULTS_FILE} ${IMAGE_ROOTFS}/etc/rfcdefaults/dacdefaults.ini
 }
