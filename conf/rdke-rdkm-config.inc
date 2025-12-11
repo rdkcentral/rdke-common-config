@@ -53,9 +53,9 @@ DAC_DEFAULTS_FILE = "${WORKDIR}/dacdefaults.ini"
 
 do_generate_dacdefaults() {
    cat <<EOF > ${DAC_DEFAULTS_FILE}
-Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.DAC.dacBundlePlatformName = ${DAC_BUN_PLATNAME_OVERRIDE}
-Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.DAC.dacBundleFirmwareCompatibilityKey = ${DAC_BUN_FIRM_COMP_KEY}
-Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.DAC.ConfigURL = ${DAC_CONFIGURL}
+Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.DAC.dacBundlePlatformName = "${DAC_BUN_PLATNAME_OVERRIDE}"
+Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.DAC.dacBundleFirmwareCompatibilityKey = "${DAC_BUN_FIRM_COMP_KEY}"
+Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.DAC.ConfigURL = "${DAC_CONFIGURL}"
 EOF
 }
 
