@@ -48,3 +48,23 @@ DAC_ANN_REGEX   ?= "public\\.*"
 DAC_BUN_FIRM_COMP_KEY ?= "1.0.0-b34e9a38a2675d4cd02cf89f7fc72874a4c99eb0-dbg"
 DAC_BUN_PLATNAME_OVERRIDE ?= "rpi4"
 DAC_CONFIGURL ?= "https://280222515084-rdkm-apps-resources.s3.eu-central-1.amazonaws.com/configuration/cpe.json"
+
+DAC_DEFAULTS_FILE = "${WORKDIR}/dacdefaults.ini"
+
+do_generate_dacdefaults() {
+   cat <<EOF > ${DAC_DEFAULTS_FILE}
+Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.DAC.dacBundlePlatformName = ${DAC_BUN_PLATNAME_OVERRIDE}
+Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.DAC.dacBundleFirmwareCompatibilityKey = ${DAC_BUN_FIRM_COMP_KEY}
+Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.DAC.ConfigURL = ${DAC_CONFIGURL}
+EOF
+}
+
+addtask generate_dacdefaults before do_rootfs after do_configure
+
+ROOTFS_POSTPROCESS_COMMAND += "install_dacdefaults; "
+
+install_dacdefaults() {
+    install -d ${IMAGE_ROOTFS}/etc/rfcdefaults
+    install -m 0644 ${DAC_DEFAULTS_FILE} ${IMAGE_ROOTFS}/etc/rfcdefaults/dacdefaults.ini
+}
+
