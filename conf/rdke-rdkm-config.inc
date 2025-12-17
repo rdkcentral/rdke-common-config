@@ -61,7 +61,7 @@ EOF
 
     # Install the file into the rootfs
     install -d ${IMAGE_ROOTFS}/etc/rfcdefaults
-    install -m 0644 ${WORKDIR}/dacdefaults.ini ${IMAGE_ROOTFS}/etc/rfcdefaults/dacdefaults.ini
+    install -m 0644 ${DAC_DEFAULTS_FILE} ${IMAGE_ROOTFS}/etc/rfcdefaults/dacdefaults.ini
 }
 
 ROOTFS_POSTPROCESS_COMMAND += "install_dacdefaults; "
