@@ -72,3 +72,4 @@ install_dacdefaults() {
 	install -m 0644 ${DAC_DEFAULTS_FILE} ${IMAGE_ROOTFS}/etc/rfcdefaults/dacdefaults.ini
 }
 
+RUNTIME_APP_PORTAL ?= "com.rdk.dac.apps"
