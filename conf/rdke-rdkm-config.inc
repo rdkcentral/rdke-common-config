@@ -51,25 +51,18 @@ DAC_CONFIGURL ?= "https://280222515084-rdkm-apps-resources.s3.eu-central-1.amazo
 
 DAC_DEFAULTS_FILE ?= "${WORKDIR}/dacdefaults.ini"
 
-do_generate_dacdefaults() {
-	cat <<EOF > ${DAC_DEFAULTS_FILE}
-	Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.DAC.dacBundlePlatformName = "${DAC_BUN_PLATNAME_OVERRIDE}"
-	Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.DAC.dacBundleFirmwareCompatibilityKey = "${DAC_BUN_FIRM_COMP_KEY}"
-	Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.DAC.ConfigURL = "${DAC_CONFIGURL}"
-	EOF
-}
+install_dacdefaults() {
+    # Generate the DAC defaults file
+    cat <<EOF > ${WORKDIR}/dacdefaults.ini
+Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.DAC.dacBundlePlatformName = "${DAC_BUN_PLATNAME_OVERRIDE}"
+Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.DAC.dacBundleFirmwareCompatibilityKey = "${DAC_BUN_FIRM_COMP_KEY}"
+Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.DAC.ConfigURL = "${DAC_CONFIGURL}"
+EOF
 
-addtask generate_dacdefaults before do_rootfs after do_configure
+    # Install the file into the rootfs
+    install -d ${IMAGE_ROOTFS}/etc/rfcdefaults
+    install -m 0644 ${WORKDIR}/dacdefaults.ini ${IMAGE_ROOTFS}/etc/rfcdefaults/dacdefaults.ini
+}
 
 ROOTFS_POSTPROCESS_COMMAND += "install_dacdefaults; "
-
-install_dacdefaults() {
-	if [ ! -f "${DAC_DEFAULTS_FILE}" ]; then
-		echo "Error: DAC defaults file '${DAC_DEFAULTS_FILE}' does not exist." >&2
-		exit 1
-	fi
-	install -d ${IMAGE_ROOTFS}/etc/rfcdefaults
-	install -m 0644 ${DAC_DEFAULTS_FILE} ${IMAGE_ROOTFS}/etc/rfcdefaults/dacdefaults.ini
-}
-
 RUNTIME_APP_PORTAL ?= "com.rdk.dac.apps"
