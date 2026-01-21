@@ -68,4 +68,3 @@ DISTRO_FEATURES:append = ' enable_libsoup3'
 DISTRO_FEATURES:append = ' memcapture'
 DISTRO_FEATURES:append = ' enable_app_gateway'
 DISTRO_FEATURES:append = ' apparmor_segmented_global'
-
