@@ -41,7 +41,7 @@ BACKTRACE_DEPENDS:pn-rfc = " breakpad-wrapper"
 BACKTRACE_DEPENDS:pn-nfrtool = " breakpad-wrapper"
 BACKTRACE_DEPENDS:pn-amazon-prime-library = " breakpad-wrapper"
 BACKTRACE_DEPENDS:pn-netflix-7.0.0 = " breakpad-wrapper"
-BACKTRACE_DEPENDS:pn-shipd = " breakpad-wrapper"
+BACKTRACE_DEPENDS:pn-ssacpc = " breakpad-wrapper"
 
 BACKTRACE_LDFLAGS:pn-iarmbus = " -Wl,--no-as-needed -lbreakpadwrapper -Wl,--as-needed "
 BACKTRACE_LDFLAGS:pn-iarmmgrs = " -lbreakpadwrapper "
@@ -83,7 +83,7 @@ BACKTRACE_LDFLAGS:pn-nfrtool = " -Wl,--no-as-needed -lbreakpadwrapper -Wl,--as-n
 BACKTRACE_LDFLAGS:pn-amazon-prime-library = " -Wl,--no-as-needed -lbreakpadwrapper -Wl,--as-needed "
 BACKTRACE_LDFLAGS:pn-wpeframework = "-Wl,--no-as-needed -lbreakpadwrapper -Wl,--as-needed"
 BACKTRACE_LDFLAGS:pn-netflix-7.0.0 = " -Wl,--no-as-needed -lbreakpadwrapper -Wl,--as-needed "
-BACKTRACE_LDFLAGS:pn-shipd = " -Wl,--no-as-needed -lbreakpadwrapper -Wl,--as-needed "
+BACKTRACE_LDFLAGS:pn-ssacpc = " -Wl,--no-as-needed -lbreakpadwrapper -Wl,--as-needed "
 
 DEPENDS:append = " ${@LOG_BACKTRACE == "y" and BACKTRACE_DEPENDS or ""}"
 LDFLAGS:append = " ${@LOG_BACKTRACE == "y" and BACKTRACE_LDFLAGS or ""}"
