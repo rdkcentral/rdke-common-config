@@ -32,7 +32,7 @@ BUILD_FACTORY_TEST = "false"
 # Enable Distro to remove provisioning precondition check while activate OCDM plugin
 DISTRO_FEATURES:append = " disable_provision_precondition_rdkm"
 
-# Enable Distro to add sceneset 
+# Enable Distro to add sceneset
 DISTRO_FEATURES:append = " sceneset"
 
 # Remove from RPI builds as memcapture is in rdke repo
@@ -40,12 +40,30 @@ DISTRO_FEATURES:remove = "memcapture"
 
 # DAC parameter values
 DAC_PARAMS ?= "true"
-DAC_DB_PATH   ?= "/opt/dac_apps/db"
-DAC_APP_PATH  ?= "/opt/dac_apps/apps"
-DAC_DATA_PATH ?= "/opt/dac_apps/data"
-DAC_ANN_FILE  ?= "config.json"
+DAC_DB_PATH     ?= "/opt/dac_apps/db"
+DAC_APP_PATH    ?= "/opt/dac_apps/apps"
+DAC_DATA_PATH   ?= "/opt/dac_apps/data"
+DAC_ANN_FILE    ?= "config.json"
 DAC_ANN_REGEX   ?= "public\\.*"
-DAC_BUN_FIRM_COMP_KEY ?= "1.0.0-b34e9a38a2675d4cd02cf89f7fc72874a4c99eb0-dbg"
+DAC_BUN_FIRM_COMP_KEY     ?= "1.0.0-b34e9a38a2675d4cd02cf89f7fc72874a4c99eb0-dbg"
 DAC_BUN_PLATNAME_OVERRIDE ?= "rpi4"
-DAC_CONFIGURL ?= "https://280222515084-rdkm-apps-resources.s3.eu-central-1.amazonaws.com/configuration/cpe.json"
+DAC_CONFIGURL   ?= "https://280222515084-rdkm-apps-resources.s3.eu-central-1.amazonaws.com/configuration/cpe.json"
 RUNTIME_APP_PORTAL ?= "com.rdk.dac.apps"
+
+DAC_DEFAULTS_FILE ?= "${WORKDIR}/dacdefaults.ini"
+
+# Install DAC defaults directly during rootfs processing
+ROOTFS_POSTPROCESS_COMMAND += " install_dacdefaults;"
+
+install_dacdefaults() {
+    install -d "${IMAGE_ROOTFS}/etc/rfcdefaults"
+
+    # Generate content to WORKDIR scratchpad, then install with proper permissions
+    cat > "${DAC_DEFAULTS_FILE}" <<EOF
+Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.DAC.dacBundlePlatformName="${DAC_BUN_PLATNAME_OVERRIDE}"
+Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.DAC.dacBundleFirmwareCompatibilityKey="${DAC_BUN_FIRM_COMP_KEY}"
+Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.DAC.ConfigURL="${DAC_CONFIGURL}"
+EOF
+
+    install -m 0644 "${DAC_DEFAULTS_FILE}" "${IMAGE_ROOTFS}/etc/rfcdefaults/dacdefaults.ini"
+}
