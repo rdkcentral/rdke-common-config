@@ -51,3 +51,4 @@ DAC_CONFIGURL ?= "https://280222515084-rdkm-apps-resources.s3.eu-central-1.amazo
 RUNTIME_APP_PORTAL ?= "com.rdk.dac.apps"
 SCENESET_DEFAULT_APPNAME ?= "com.rdkcentral.refui"
 FACTORY_APP_PATH ?= "/etc/rdk/factoryapps"
+APP_PREINSTALL_DIRECTORY ?= "/media/apps"
