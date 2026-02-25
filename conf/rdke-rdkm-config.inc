@@ -17,9 +17,6 @@ PREFERRED_PROVIDER_virtual/default-font ?= "liberation-fonts"
 PREFERRED_PROVIDER_virtual/libpackage = "packager-lisa"
 
 DISTRO_FEATURES:append = " enable_ralf"
-DISTRO_FEATURES:append = " enable-dab"
-DISTRO_FEATURES:append = " cobalt-25"
-DISTRO_FEATURES:append = " enable_cobalt_plugin"
 DISTRO_FEATURES:append = " rialto_in_dac"
 
 # GDB has incompatible gplv3 license, disable by default
@@ -31,22 +28,15 @@ BUILD_FACTORY_TEST = "false"
 # Enable Distro to remove provisioning precondition check while activate OCDM plugin
 DISTRO_FEATURES:append = " disable_provision_precondition_rdkm"
 
-# Enable Distro to add sceneset 
+# Enable Distro to add sceneset
 DISTRO_FEATURES:append = " sceneset"
 
 # Remove from RPI builds as memcapture is in rdke repo
 DISTRO_FEATURES:remove = "memcapture"
 
 # DAC parameter values
-DAC_PARAMS ?= "true"
-DAC_DB_PATH   ?= "/opt/dac_apps/db"
 DAC_APP_PATH  ?= "/opt/dac_apps/apps"
-DAC_DATA_PATH ?= "/opt/dac_apps/data"
-DAC_ANN_FILE  ?= "config.json"
-DAC_ANN_REGEX   ?= "public\\.*"
-DAC_BUN_FIRM_COMP_KEY ?= "1.0.0-b34e9a38a2675d4cd02cf89f7fc72874a4c99eb0-dbg"
-DAC_BUN_PLATNAME_OVERRIDE ?= "rpi4"
-DAC_CONFIGURL ?= "https://280222515084-rdkm-apps-resources.s3.eu-central-1.amazonaws.com/configuration/cpe.json"
+DAC_APP_CERT_PATH = "/etc/rdk/certs"
 RUNTIME_APP_PORTAL ?= "com.rdk.dac.apps"
 SCENESET_DEFAULT_APPNAME ?= "com.rdkcentral.refui"
 FACTORY_APP_PATH ?= "/etc/rdk/factoryapps"
