@@ -36,7 +36,7 @@ DISTRO_FEATURES:remove = "memcapture"
 
 # DAC parameter values
 DAC_APP_PATH  ?= "/opt/dac_apps/apps"
-DAC_APP_CERT_PATH = "/etc/rdk/certs"
+DAC_APP_CERT_PATH ?= "/etc/rdk/certs"
 RUNTIME_APP_PORTAL ?= "com.rdk.dac.apps"
 SCENESET_DEFAULT_APPNAME ?= "com.rdkcentral.refui"
 FACTORY_APP_PATH ?= "/etc/rdk/factoryapps"
