@@ -16,6 +16,9 @@ PREFERRED_PROVIDER_virtual/default-font ?= "liberation-fonts"
 #libpackage support for DAC applications
 PREFERRED_PROVIDER_virtual/libpackage = "packager-lisa"
 
+# Set entservices-appgateway as preferred provider
+PREFERRED_PROVIDER_virtual/firebolt = "entservices-appgateway"
+
 DISTRO_FEATURES:append = " enable_ralf"
 DISTRO_FEATURES:append = " rialto_in_dac"
 
@@ -41,3 +44,4 @@ RUNTIME_APP_PORTAL ?= "com.rdk.dac.apps"
 SCENESET_DEFAULT_APPNAME ?= "com.rdkcentral.refui"
 FACTORY_APP_PATH ?= "/etc/rdk/factoryapps"
 APP_PREINSTALL_DIRECTORY ?= "/media/apps"
+APP_DOWNLOAD_DIRECTORY ?= "/opt/CDL"
