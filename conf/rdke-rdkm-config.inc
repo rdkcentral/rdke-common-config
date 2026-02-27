@@ -18,6 +18,7 @@ PREFERRED_PROVIDER_virtual/libpackage = "packager-lisa"
 
 DISTRO_FEATURES:append = " enable_ralf"
 DISTRO_FEATURES:append = " rialto_in_dac"
+DISTRO_FEATURES:append = " enable_rdkshell_force_1080"
 
 # GDB has incompatible gplv3 license, disable by default
 DISTRO_FEATURES:remove = "enable_gdb_support"
