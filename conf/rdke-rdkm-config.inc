@@ -17,7 +17,7 @@ PREFERRED_PROVIDER_virtual/default-font ?= "liberation-fonts"
 PREFERRED_PROVIDER_virtual/libpackage = "packager-lisa"
 
 # Set entservices-appgateway as preferred provider
-PREFERRED_PROVIDER_virtual/firebolt ?= "entservices-appgateway"
+PREFERRED_PROVIDER_virtual/firebolt = "entservices-appgateway"
 
 DISTRO_FEATURES:append = " enable_ralf"
 DISTRO_FEATURES:append = " rialto_in_dac"
