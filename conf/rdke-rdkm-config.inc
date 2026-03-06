@@ -43,4 +43,5 @@ FACTORY_APP_PATH ?= "/etc/rdk/factoryapps"
 APP_PREINSTALL_DIRECTORY ?= "/media/apps"
 
 # TODO: cleanup when common middleware aligns with DAC2.0
-DISTRO_FEATURES:remove = ' cobalt-plugin enable_ripple rdkshell webkitbrowser-plugin '
+# Try removing 'rdkshell' if enabled from other layers.
+DISTRO_FEATURES:remove = "cobalt-plugin enable_ripple rdkshell webkitbrowser-plugin"
