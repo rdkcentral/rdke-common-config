@@ -32,6 +32,9 @@ DISTRO_FEATURES:append = " disable_provision_precondition_rdkm"
 # Enable Distro to add sceneset
 DISTRO_FEATURES:append = " sceneset"
 
+# Enable appgateway distro
+DISTRO_FEATURES:append = " enable_app_gateway"
+
 # Remove from RPI builds as memcapture is in rdke repo
 DISTRO_FEATURES:remove = "memcapture"
 
