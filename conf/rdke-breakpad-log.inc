@@ -43,7 +43,7 @@ BACKTRACE_DEPENDS:pn-amazon-prime-library = " breakpad-wrapper"
 BACKTRACE_DEPENDS:pn-netflix-7.0.0 = " breakpad-wrapper"
 
 BACKTRACE_LDFLAGS:pn-iarmbus = " -Wl,--no-as-needed -lbreakpadwrapper -Wl,--as-needed "
-BACKTRACE_LDFLAGS:pn-iarmmgrs = " -lbreakpadwrapper "
+BACKTRACE_LDFLAGS:pn-iarmmgrs = " -Wl,--no-as-needed -lbreakpadwrapper -Wl,--as-needed "
 BACKTRACE_LDFLAGS:pn-rmfstreamer = " -lbreakpadwrapper "
 BACKTRACE_LDFLAGS:pn-rmfpodmgr = " -lbreakpadwrapper "
 BACKTRACE_LDFLAGS:pn-parodus = " -Wl,--no-as-needed -lbreakpadwrapper -Wl,--as-needed "
