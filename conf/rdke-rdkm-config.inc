@@ -20,6 +20,7 @@ PREFERRED_PROVIDER_virtual/libpackage = "packager-lisa"
 PREFERRED_PROVIDER_virtual/firebolt = "entservices-appgateway"
 
 DISTRO_FEATURES:append = " enable_ralf"
+DISTRO_FEATURES:append = " enable_bolt_apps"
 DISTRO_FEATURES:append = " rialto_in_dac"
 
 # GDB has incompatible gplv3 license, disable by default
@@ -45,3 +46,7 @@ SCENESET_DEFAULT_APPNAME ?= "com.rdkcentral.refui"
 FACTORY_APP_PATH ?= "/etc/rdk/factoryapps"
 APP_PREINSTALL_DIRECTORY ?= "/media/apps"
 APP_DOWNLOAD_DIRECTORY ?= "/opt/CDL/"
+
+# TODO: cleanup when common middleware aligns with DAC2.0
+# Try removing 'rdkshell' if enabled from other layers.
+DISTRO_FEATURES:remove = "cobalt-plugin enable_ripple rdkshell webkitbrowser-plugin"
