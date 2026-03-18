@@ -43,7 +43,7 @@ DAC_APP_PATH  ?= "/opt/dac_apps/apps"
 DAC_APP_CERT_PATH ?= "/etc/rdk/certs"
 RUNTIME_APP_PORTAL ?= "com.rdk.dac.apps"
 SCENESET_DEFAULT_APPNAME ?= "com.rdkcentral.refui"
-FACTORY_APP_PATH ?= "/etc/rdk/factoryapps"
+FACTORY_APPS_PATH ?= "/etc/rdk/factoryapps"
 APP_PREINSTALL_DIRECTORY ?= "/media/apps"
 APP_DOWNLOAD_DIRECTORY ?= "/opt/CDL/"
 
