@@ -19,6 +19,10 @@ PREFERRED_PROVIDER_virtual/libpackage = "packager-lisa"
 # Set entservices-appgateway as preferred provider
 PREFERRED_PROVIDER_virtual/firebolt = "entservices-appgateway"
 
+# Default runtime provider for RCU keymap package. OEM/vendor layers can override.
+# Empty by default - no dependency pulled in unless a vendor layer sets this variable.
+VIRTUAL-RUNTIME_rcu-keymapper ?= ""
+
 DISTRO_FEATURES:append = " enable_ralf"
 DISTRO_FEATURES:append = " enable_bolt_apps"
 DISTRO_FEATURES:append = " rialto_in_dac"
@@ -50,6 +54,3 @@ APP_DOWNLOAD_DIRECTORY ?= "/opt/CDL/"
 # TODO: cleanup when common middleware aligns with DAC2.0
 # Try removing 'rdkshell' if enabled from other layers.
 DISTRO_FEATURES:remove = "cobalt-plugin enable_ripple rdkshell webkitbrowser-plugin"
-
-# Default RCU Keymapping configuration
-WINDOWMANAGER_RCU_KEYMAP_FILE ? = "/etc/rcu_keymap.json"
