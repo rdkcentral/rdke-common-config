@@ -50,3 +50,6 @@ APP_DOWNLOAD_DIRECTORY ?= "/opt/CDL/"
 # TODO: cleanup when common middleware aligns with DAC2.0
 # Try removing 'rdkshell' if enabled from other layers.
 DISTRO_FEATURES:remove = "cobalt-plugin enable_ripple rdkshell webkitbrowser-plugin"
+
+# Default RCU Keymapping configuration
+WINDOWMANAGER_RCU_KEYMAP_FILE ? = "/etc/rcu_keymap.json"
