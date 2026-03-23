@@ -46,6 +46,7 @@ SCENESET_DEFAULT_APPNAME ?= "com.rdkcentral.refui"
 FACTORY_APPS_PATH ?= "/etc/rdk/factoryapps"
 APP_PREINSTALL_DIRECTORY ?= "/media/apps"
 APP_DOWNLOAD_DIRECTORY ?= "/opt/CDL/"
+DEFAULT_APP_STORAGE_PATH ?= "/opt/persistent/storageManager"
 
 # TODO: cleanup when common middleware aligns with DAC2.0
 # Try removing 'rdkshell' if enabled from other layers.
