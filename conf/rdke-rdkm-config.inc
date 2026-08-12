@@ -54,3 +54,6 @@ DISTRO_FEATURES:remove = "cobalt-plugin enable_ripple rdkshell webkitbrowser-plu
 
 # Default RCU Keymapping configuration
 WINDOWMANAGER_RCU_KEYMAP_FILE ?= "/etc/rcu_keymap.json"
+
+# Temporary until RDKMVE-2474 gets resolved
+DISTRO_FEATURES:remove = "build_external_player_interface"
