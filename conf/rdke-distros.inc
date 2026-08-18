@@ -71,3 +71,5 @@ DISTRO_FEATURES:append = ' enable_app_gateway'
 DISTRO_FEATURES:append = ' apparmor_segmented_global'
 DISTRO_FEATURES:append = ' rdkwindowmanager'
 DISTRO_FEATURES:append = ' build_external_player_interface'
+
+DISTRO_FEATURES:append = ' enable_rdkappmanagers'
