@@ -21,7 +21,6 @@ PREFERRED_PROVIDER_virtual/firebolt = "entservices-appgateway"
 
 DISTRO_FEATURES:append = " enable_ralf"
 DISTRO_FEATURES:append = " enable_bolt_apps"
-DISTRO_FEATURES:append = " rialto_in_dac"
 DISTRO_FEATURES:append = " appgateway_sceneset"
 
 # GDB has incompatible gplv3 license, disable by default
