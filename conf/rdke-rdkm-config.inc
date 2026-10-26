@@ -55,5 +55,8 @@ DISTRO_FEATURES:remove = "cobalt-plugin enable_ripple rdkshell webkitbrowser-plu
 # Default RCU Keymapping configuration
 WINDOWMANAGER_RCU_KEYMAP_FILE ?= "/etc/rcu_keymap.json"
 
+# RDKEMW-26997 - fix for systemd service failure on Kernel6 & CGroupV2 enabled platforms
+DISTRO_FEATURES:append = "enable_kernel6_cgroupv2"
+
 # Temporary until RDKMVE-2474 gets resolved
 DISTRO_FEATURES:remove = "build_external_player_interface"
