@@ -60,3 +60,8 @@ DISTRO_FEATURES:append = "enable_kernel6_cgroupv2"
 
 # Temporary until RDKMVE-2474 gets resolved
 DISTRO_FEATURES:remove = "build_external_player_interface"
+
+#RDKEMW-27760
+APPMGR_DEV_PKGCONFIG = "devoptions"
+#RDKEMW-25128
+ENABLE_PKG_SPECIFIER = "packagespecifier"
