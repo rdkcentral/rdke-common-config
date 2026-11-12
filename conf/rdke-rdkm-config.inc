@@ -35,9 +35,6 @@ DISTRO_FEATURES:append = " disable_provision_precondition_rdkm"
 # Enable Distro to add sceneset
 DISTRO_FEATURES:append = " sceneset"
 
-# Remove from RPI builds as memcapture is in rdke repo
-DISTRO_FEATURES:remove = "memcapture"
-
 # DAC parameter values
 DAC_APP_PATH  ?= "/opt/dac_apps/apps"
 DAC_APP_CERT_PATH ?= "/etc/rdk/certs"
