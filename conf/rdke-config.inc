@@ -28,8 +28,12 @@ BBMASK .= "|${RDKROOT}/rdke/common/meta-oss-reference/recipes-support/jansson/ja
 
 #RDKE-292 Bring size Optimization across all layers.
 OPTIMIZE_DEFAULT = "-Os"
+# Wrynose renamed DEBUG_FLAGS to DEBUG_LEVELFLAG in bitbake.conf.
+DEBUG_FLAGS ?= "${DEBUG_LEVELFLAG} -feliminate-unused-debug-types ${DEBUG_PREFIX_MAP}"
 FULL_OPTIMIZATION = "${OPTIMIZE_DEFAULT} -pipe ${DEBUG_FLAGS}"
+# LTO emits debug information during linking, so pass prefix maps to the linker too.
+TARGET_LDFLAGS:append:class-target = " ${DEBUG_PREFIX_MAP}"
 
 #Removing fstackprotector and fortify source
-SECURITY_CFLAGS:remove = " -fstack-protector -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Wno-error=format-security -Wno-error=unused-result"
+SECURITY_CFLAGS:remove = " -fstack-protector -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security -Wno-error=format-security -Wno-error=unused-result"
 SECURITY_LDFLAGS:remove = " -fstack-protector"
