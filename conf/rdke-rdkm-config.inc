@@ -35,9 +35,6 @@ DISTRO_FEATURES:append = " disable_provision_precondition_rdkm"
 # Enable Distro to add sceneset
 DISTRO_FEATURES:append = " sceneset"
 
-# Remove from RPI builds as memcapture is in rdke repo
-DISTRO_FEATURES:remove = "memcapture"
-
 # DAC parameter values
 DAC_APP_PATH  ?= "/opt/dac_apps/apps"
 DAC_APP_CERT_PATH ?= "/etc/rdk/certs"
@@ -56,7 +53,7 @@ DISTRO_FEATURES:remove = "cobalt-plugin enable_ripple rdkshell webkitbrowser-plu
 WINDOWMANAGER_RCU_KEYMAP_FILE ?= "/etc/rcu_keymap.json"
 
 # RDKEMW-26997 - fix for systemd service failure on Kernel6 & CGroupV2 enabled platforms
-DISTRO_FEATURES:append = "enable_kernel6_cgroupv2"
+DISTRO_FEATURES:append = " enable_kernel6_cgroupv2"
 
 # Temporary until RDKMVE-2474 gets resolved
 DISTRO_FEATURES:remove = "build_external_player_interface"
