@@ -62,3 +62,6 @@ DISTRO_FEATURES:remove = "build_external_player_interface"
 APPMGR_DEV_PKGCONFIG = "devoptions"
 #RDKEMW-25128
 ENABLE_PKG_SPECIFIER = "packagespecifier"
+
+#RDKEMW-23628 - Resource Monitor
+DISTRO_FEATURES:append = " resource-monitor"
